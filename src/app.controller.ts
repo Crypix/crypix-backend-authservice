@@ -1,14 +1,15 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 import { MessagePattern } from '@nestjs/microservices';
-import { of, delay } from 'rxjs';
+import { InitData } from '@telegram-apps/init-data-node';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @MessagePattern({ cmd: 'ping' })
-  ping(_: any) {
-    return 'Hello world';
+  @MessagePattern({ cmd: 'AuthOrRegister' })
+  AuthOrRegister(data: InitData) {
+    console.log(data);
+    return 'Hello world 2!';
   }
 }
