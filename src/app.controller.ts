@@ -5,11 +5,10 @@ import { InitData } from '@telegram-apps/init-data-node';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+	constructor(private readonly appService: AppService) {}
 
-  @MessagePattern({ cmd: 'AuthOrRegister' })
-  AuthOrRegister(data: InitData) {
-    console.log(data);
-    return 'Hello world 2!';
-  }
+	@MessagePattern({ cmd: 'AuthOrRegister' })
+	AuthOrRegister(data: InitData) {
+		return 'Hello world 2!';
+	}
 }
