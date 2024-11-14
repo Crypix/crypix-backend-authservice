@@ -1,4 +1,4 @@
-import { Inject, Module } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { Pool } from 'pg';
 
@@ -8,11 +8,6 @@ import * as schemas from './schemas/schema';
 
 const DRIZZLE = Symbol('drizzle-connection');
 type DizzleDbProvider = NodePgDatabase<typeof schemas>;
-
-// const InjectSchema = (
-//     entity: keyof typeof schemas,
-//     dataSource: string = DRIZZLE,
-//   ): ReturnType<typeof Inject> => Inject(getRepositoryToken(entity, dataSource));
 
 @Module({
 	providers: [
