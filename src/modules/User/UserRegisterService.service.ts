@@ -1,9 +1,8 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { DizzleDbProvider, DRIZZLE } from '../drizzle/drizzle.module';
+import { DizzleDbProvider, DRIZZLE } from '@drizzle/drizzle.module';
 import { type User as TgaUserType } from '@telegram-apps/init-data-node';
-import { TgaUser, TgaUserData } from '../drizzle/schemas/TgaUser.schema';
-import { eq } from 'drizzle-orm';
-import { ValidateData } from 'src/utils/ValidateData';
+import { TgaUser, TgaUserData } from '@drizzle/schemas/TgaUser.schema';
+import { ValidateData } from '@utils/ValidateData';
 import { UserService } from './UserService.service';
 
 @Injectable()

@@ -2,11 +2,10 @@ import { Controller } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
 import { type User as TgaUserType } from '@telegram-apps/init-data-node';
 import { UserRegisterService } from './UserRegisterService.service';
-import { UserService } from './UserService.service';
 import { UserWalletService } from '../UserTonWallet/UserWalletService.service';
-import { UserTonWalletBody } from 'src/interfaces/UserTonWallet';
-import { UserFullData } from 'src/interfaces/UserFullData';
-import { UserTonWalletData } from '../drizzle/schemas/UserTonWallet.schema';
+import { UserTonWalletBody } from '@interfaces/UserTonWallet';
+import { UserFullData } from '@interfaces/UserFullData';
+import { UserTonWalletData } from '@drizzle/schemas/UserTonWallet.schema';
 
 @Controller()
 class UserController {

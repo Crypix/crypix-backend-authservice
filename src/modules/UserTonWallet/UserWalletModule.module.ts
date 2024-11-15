@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { UserWalletService } from './UserWalletService.service';
 import { UserWalletController } from './UserWalletController.controller';
-import { DrizzleModule } from '../drizzle/drizzle.module';
+import { DrizzleModule } from '@drizzle/drizzle.module';
 
 @Module({
 	imports: [DrizzleModule],

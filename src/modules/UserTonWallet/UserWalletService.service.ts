@@ -1,10 +1,10 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { UserTonWallet, UserTonWalletData } from '../drizzle/schemas/UserTonWallet.schema';
-import { DRIZZLE, DizzleDbProvider } from '../drizzle/drizzle.module';
-import { TgaUserData } from '../drizzle/schemas/TgaUser.schema';
-import type { UserTonWalletBody } from 'src/interfaces/UserTonWallet';
+import { UserTonWallet, UserTonWalletData } from '@drizzle/schemas/UserTonWallet.schema';
+import { DRIZZLE, DizzleDbProvider } from '@drizzle/drizzle.module';
+import { TgaUserData } from '@drizzle/schemas/TgaUser.schema';
+import type { UserTonWalletBody } from '@interfaces/UserTonWallet';
 import { eq } from 'drizzle-orm';
-import { ValidateData } from 'src/utils/ValidateData';
+import { ValidateData } from '@utils/ValidateData';
 
 @Injectable()
 class UserWalletService {

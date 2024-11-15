@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { UserRegisterService } from './UserRegisterService.service';
 import { UserController } from './UserController.controller';
-import { DrizzleModule } from '../drizzle/drizzle.module';
+import { DrizzleModule } from '@drizzle/drizzle.module';
 import { UserService } from './UserService.service';
 import { UserWalletModule } from '../UserTonWallet/UserWalletModule.module';
 
